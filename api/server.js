@@ -18,7 +18,7 @@ server.use(express.json());
 
 
 server.use("/api/auth",  authRouter);
-server.use("/api/users",  authorization, usersRouter);
+server.use("/api/users",   usersRouter);
 server.use('/api/tools', authorization, tools)
 server.use('/api/toolrental', authorization, toolRental)
 

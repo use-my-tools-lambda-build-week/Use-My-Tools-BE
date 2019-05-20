@@ -10,7 +10,8 @@ All fields required
 first_name:"Test",
 last_name:"Test,
 username:"Test",
-password:"Test234"
+password:"Test234",
+thumbnail_url:"http://whatever.com"
 }
 
 1. Login an existing user and receive token
@@ -93,7 +94,8 @@ All fields required
 first_name:"Test",
 last_name:"Test,
 username:"Test",
-password:"Test234"
+password:"Test234",
+thumbnail_url:"http://test.com"
 }
 
 1. Update a tool
