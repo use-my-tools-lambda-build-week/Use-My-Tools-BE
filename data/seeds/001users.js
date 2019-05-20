@@ -5,6 +5,7 @@ function createUser() {
     first_name: faker.name.firstName(),
     last_name: faker.name.lastName(),
     thumbnail_url: faker.image.avatar(),
+    username:faker.internet.email(),
     password: "randomPassword"
   };
 }

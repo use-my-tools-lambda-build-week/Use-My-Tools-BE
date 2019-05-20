@@ -108,7 +108,7 @@ user_id, tool, and price are required fields
     "price":"10.50",
     "description":"Ya hit stuff, it gets nailed",
     "image_url":"http://imgurl.com",
-    "is_rented":"false"
+   
 }
 
 
