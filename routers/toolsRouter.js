@@ -76,7 +76,7 @@ router.post("/",  async (req, res) => {
 
 router.put("/:id",  async (req, res) => {
   if (!req.body.tool || !req.body.price || !req.body.lender_id) {
-    res.status(400).json({ error: "must enter tool, price, and lender_id!" });
+    res.status(400).json({ error: "must enter tool, price, and lender_id" });
   } else {
     try {
       const count = await db("tools")

@@ -7,10 +7,10 @@ Upon receiving a token it's recommended to save it in local storage.
 Example
 All fields required
 {
-"first_name":"Test",
-"last_name":"Test,
-"username":"Test",
-"password":"Test234"
+first_name:"Test",
+last_name:"Test,
+username:"Test",
+password:"Test234"
 }
 
 1. Login an existing user and receive token
@@ -21,8 +21,8 @@ Upon receiving a token it's recommended to save it in local storage.
 Example
 all fields required
 {
-    "username":"Test",
-    "password":"Test"
+    username:"Test",
+    password:"Test"
 }
 
 1. Add a tool
@@ -31,12 +31,12 @@ https://rent-mytools.herokuapp.com/api/tools
 Example
 user_id, tool, and price are required fields
 {
-    "user_id":"1",
-    "tool":"hammer",
-    "price":"10.50",
-    "description":"Ya hit stuff, it gets nailed",
-    "image_url":"http://imgurl.com",
-    "is_rented":"false"
+    user_id:"1",
+    tool:"hammer",
+    price:"10.50",
+    description:"Ya hit stuff, it gets nailed",
+    image_url:"http://imgurl.com",
+    is_rented:"false"
 }
 
 1. Add a tool to rented list
@@ -46,8 +46,8 @@ Example
 All fields required (renter_id === user_id)
 
 {
-    "renter_id":"1",
-    "tool_id":"1"
+    renter_id:"1",
+    tool_id:"1"
 }
 
 **Get requests
@@ -90,10 +90,10 @@ https://rent-mytools.herokuapp.com/api/users/:id
 Example
 All fields required
 {
-"first_name":"Test",
-"last_name":"Test,
-"username":"Test",
-"password":"Test234"
+first_name:"Test",
+last_name:"Test,
+username:"Test",
+password:"Test234"
 }
 
 1. Update a tool
@@ -103,11 +103,11 @@ Example
 user_id, tool, and price are required fields
 
 {
-    "user_id":"1",
-    "tool":"hammer",
-    "price":"10.50",
-    "description":"Ya hit stuff, it gets nailed",
-    "image_url":"http://imgurl.com",
+    user_id:"1",
+    tool:"hammer",
+    price:"10.50",
+    description:"Ya hit stuff, it gets nailed",
+    image_url:"http://imgurl.com",
    
 }
 
