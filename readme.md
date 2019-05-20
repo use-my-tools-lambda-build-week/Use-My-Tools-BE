@@ -1,6 +1,6 @@
 ** POST requests
 1. Add a user and receive token
-http://url/api/auth/register
+https://rent-mytools.herokuapp.com/api/auth/register
 
 Upon receiving a token it's recommended to save it in local storage.
 
@@ -14,7 +14,7 @@ All fields required
 }
 
 1. Login an existing user and receive token
-http://url/api/auth/login
+https://rent-mytools.herokuapp.com/api/auth/login
 
 Upon receiving a token it's recommended to save it in local storage.
 
@@ -26,7 +26,7 @@ all fields required
 }
 
 1. Add a tool
-http://url/api/tools
+https://rent-mytools.herokuapp.com/api/tools
 
 Example
 user_id, tool, and price are required fields
@@ -40,7 +40,7 @@ user_id, tool, and price are required fields
 }
 
 1. Add a tool to rented list
-http://url/api/toolrental
+https://rent-mytools.herokuapp.com/api/toolrental
 
 Example
 All fields required (renter_id === user_id)
@@ -53,40 +53,40 @@ All fields required (renter_id === user_id)
 **Get requests
 
 1. Get All Tools
-http://url/api/tools
+http://https://rent-mytools.herokuapp.com/api/tools
 
 1. Get tool by ID
 (:id === tool_id)
-http://url/api/tools/:id
+http://https://rent-mytools.herokuapp.com/api/tools/:id
 
 1. Get all users
-http://url/api/users
+http://https://rent-mytools.herokuapp.com/api/users
 
 
 1. Get user by ID
-http://url/api/users/:id
+http://https://rent-mytools.herokuapp.com/api/users/:id
 
 1. Get all rented tools
-http://url/api/toolrental
+http://https://rent-mytools.herokuapp.com/api/toolrental
 
 
 
 **Delete requests
 
 1. Delete a user
-http://url/api/users/:id
+http://https://rent-mytools.herokuapp.com/api/users/:id
 
 1. Delete a tool
-http://url/api/tools/:id
+http://https://rent-mytools.herokuapp.com/api/tools/:id
 
 1. Delete a rental from rented list
-http://url/api/toolrental/:id
+http://https://rent-mytools.herokuapp.com/api/toolrental/:id
 
 
 **Update Requests
 
 1. Update a user
-http://url/api/users/:id
+https://rent-mytools.herokuapp.com/api/users/:id
 Example
 All fields required
 {
@@ -97,7 +97,7 @@ All fields required
 }
 
 1. Update a tool
-http://url/api/tools/:id
+https://rent-mytools.herokuapp.com/api/tools/:id
 
 Example
 user_id, tool, and price are required fields

@@ -1,13 +1,23 @@
+const faker = require("faker");
+
+function createUser() {
+  return {
+    first_name: faker.name.firstName(),
+    last_name: faker.name.lastName(),
+    thumbnail_url: faker.image.avatar(),
+    password: "randomPassword"
+  };
+}
+
+userList = [];
+
+for (let i = 1; i < 20; i++) {
+  userList.push(createUser());
+}
 
 exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('users').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  return knex("users").then(function() {
+    // Inserts seed entries
+    return knex("users").insert(userList);
+  });
 };
