@@ -30,7 +30,7 @@ function tokenMaker(user) {
     id: 2,
     first_name: "test",
     last_name: "test",
-    email: "mail@mail.com",
+    username: "mail@mail.com",
     password: "test"
   };
   
