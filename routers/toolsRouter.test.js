@@ -21,9 +21,9 @@ function tokenMaker(user) {
 
   const tool = {
     id: 2,
-    name: "test",
+    tool: "test",
     price: 3,
-    lender_id: 1
+    renter_id: 1
   };
 
   const user = {
