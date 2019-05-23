@@ -24,6 +24,7 @@ exports.up = function(knex, Promise) {
           .onDelete("CASCADE")
           .onUpdate("CASCADE");
         table.string("tool", 100).notNullable();
+        table.float('deposit');
         table.float("price").notNullable();
         table.string("description", 1000);
         table.string("imageUrl");
