@@ -6,6 +6,7 @@ function createTool() {
     tool:faker.lorem.word(),
     description:faker.lorem.words(),
     image_url:"http://lorempixel.com/640/480",
+    is_rented:false
   };
 }
 
