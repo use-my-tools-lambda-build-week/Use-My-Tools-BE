@@ -1,6 +1,19 @@
 const router = require("express").Router();
 const db = require("../data/helpers/users-model.js");
 
+
+
+//get all tools
+router.get("/", (req, res) => {
+  Users.find()
+    .then(users => {
+      res.status(200).json({ users });
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {

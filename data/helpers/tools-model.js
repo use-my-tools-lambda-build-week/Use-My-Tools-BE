@@ -29,11 +29,7 @@ async function find() {
       return Promise.resolve(null);
     }
   }
-  function findBy(filter) {
-    return db("tools")
-      .where(filter)
-      .then(tools => dbToJs(tools));
-  }
+ 
 
   async function create(tool) {
     const [id] = await db("tools").insert(tool, "id");
