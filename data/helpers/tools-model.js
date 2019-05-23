@@ -12,6 +12,11 @@ module.exports = {
 async function find() {
     return db("tools");
   }
+  function findBy(filter) {
+    return db("tools")
+      .where(filter)
+      .then(tools => dbToJs(tools));
+  }
 
   async function findById(id) {
     const tool = await db("tools")
@@ -19,16 +24,12 @@ async function find() {
       .first();
   
     if (tool) {
-      return Promise.resolve(dbToJs(tool));
+      return Promise.resolve((tool));
     } else {
       return Promise.resolve(null);
     }
   }
-  function findBy(filter) {
-    return db("tools")
-      .where(filter)
-      .then(tools => dbToJs(tools));
-  }
+ 
 
   async function create(tool) {
     const [id] = await db("tools").insert(tool, "id");
