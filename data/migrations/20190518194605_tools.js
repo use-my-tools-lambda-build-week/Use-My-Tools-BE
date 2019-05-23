@@ -23,17 +23,17 @@ exports.up = function(knex, Promise) {
           .notNullable()
           .onDelete("CASCADE")
           .onUpdate("CASCADE");
-        table.string("tool", 100).notNullable();
+        table.string("toolName", 100).notNullable();
         table.float('deposit');
         table.float("price").notNullable();
         table.string("description", 1000);
         table.string("imageUrl");
         table.boolean("isRented").defaultTo(false);
       })
-    .createTable("rented-tools", table => {
+    .createTable("rentedTools", table => {
           table.increments();
           table
-            .integer("renter_id")
+            .integer("renterId")
             .notNullable()
             .unsigned()
             .references("id")
@@ -41,7 +41,7 @@ exports.up = function(knex, Promise) {
             .onDelete("RESTRICT")
             .onUpdate("CASCADE");
           table
-            .integer("tool_id")
+            .integer("toolId")
             .notNullable()
             .unsigned()
             .references("id")
