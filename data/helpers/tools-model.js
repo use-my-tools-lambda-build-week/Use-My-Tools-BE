@@ -13,22 +13,21 @@ async function find() {
     return db("tools");
   }
 
-  async function findById(id) {
-    const tool = await db("tools")
-      .where({ id })
-      .first();
   
-    if (tool) {
-      return Promise.resolve(dbToJs(tool));
-    } else {
-      return Promise.resolve(null);
-    }
-  }
-  function findBy(filter) {
-    return db("tools")
-      .where(filter)
-      .then(tools => dbToJs(tools));
-  }
+async function findById(id) {
+  const tool = await db("tools")
+    .select({
+      id: "id",
+      user_id:"user_id",
+      tool: "tool",
+      price: "price",
+      description: "description",
+      image_url: "image_url"
+    })
+    .where({ id })
+    .first();
+  return tool;
+}
 
   async function create(tool) {
     const [id] = await db("tools").insert(tool, "id");
