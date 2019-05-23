@@ -12,6 +12,11 @@ module.exports = {
 async function find() {
     return db("tools");
   }
+  function findBy(filter) {
+    return db("tools")
+      .where(filter)
+      .then(tools => dbToJs(tools));
+  }
 
   async function findById(id) {
     const tool = await db("tools")
