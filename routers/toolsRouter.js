@@ -55,14 +55,14 @@ router.get("/:id",  async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({
-      message: "Error retrieving the tool"
+      message: "Error getting the tool"
     });
   }
 });
 
 router.post("/",  async (req, res) => {
   if (!req.body.tool || !req.body.price || !req.body.lender_id) {
-    res.status(400).json({ error: "must enter tool, price, and lender_id!" });
+    res.status(400).json({ error: "must enter tool, price, and user_id" });
   } else {
     try {
       const tool = await Tools.create(req.body);
@@ -76,7 +76,7 @@ router.post("/",  async (req, res) => {
 
 router.put("/:id",  async (req, res) => {
   if (!req.body.tool || !req.body.price || !req.body.lender_id) {
-    res.status(400).json({ error: "must enter tool, price, and lender_id" });
+    res.status(400).json({ error: "must enter tool, price, and user_id" });
   } else {
     try {
       const count = await db("tools")
@@ -102,7 +102,7 @@ router.delete("/:id", deleteRentalRequest, async (req, res) => {
   try {
     const tool = await Tools.remove(req.params.id);
     if (tool > 0) {
-      res.status(200).json({ message: "tool has been deleted!" });
+      res.status(200).json({ message: "tool deleted" });
     } else {
       res.status(404).json({ message: "tool with that ID could not be found" });
     }
