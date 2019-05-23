@@ -8,15 +8,16 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex("tools").insert([
         {
-          tool: "Hammer",
+          toolName: "Hammer",
        imageUrl:
             "http://lorempixel.com/640/480",
           price: 3.00,
           description:"I hit things",
-         userID: 1
+         userID: 1,
+         
         },
         {
-          tool: "Screwdriver",
+          toolName: "Screwdriver",
        imageUrl:
             "http://lorempixel.com/640/480",
           price: 12.34,
@@ -24,7 +25,7 @@ exports.seed = function(knex, Promise) {
          userID: 2
         },
         {
-          tool: "drill",
+          toolName: "drill",
        imageUrl:
             "http://lorempixel.com/640/480",
           price: 2.3,
@@ -32,7 +33,7 @@ exports.seed = function(knex, Promise) {
          userID: 3
         },
         {
-          tool: "Angle Drill",
+          toolName: "Angle Drill",
        imageUrl:
             "http://lorempixel.com/640/480",
             description:"I drill things at an angle",
@@ -40,7 +41,7 @@ exports.seed = function(knex, Promise) {
          userID: 4
         },
         {
-          tool: "Sledgehammer",
+          toolName: "Sledgehammer",
        imageUrl:
             "hhttp://lorempixel.com/640/480",
           price: 5.42,
@@ -48,7 +49,7 @@ exports.seed = function(knex, Promise) {
          userID: 5
         },
         {
-          tool: "Allen wrench",
+          toolName: "Allen wrench",
        imageUrl:
             "http://lorempixel.com/640/480",
           price: 9.34,
@@ -56,7 +57,7 @@ exports.seed = function(knex, Promise) {
          userID: 6
         },
         {
-          tool: "Jackhammer",
+          toolName: "Jackhammer",
        imageUrl:
             "http://lorempixel.com/640/480",
           price: 8.00,
@@ -64,7 +65,7 @@ exports.seed = function(knex, Promise) {
          userID: 7
         },
         {
-          tool: "Impact drill",
+          toolName: "Impact drill",
        imageUrl:
             "http://lorempixel.com/640/480",
             description:"I drill AND hit things",
