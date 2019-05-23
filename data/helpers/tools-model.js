@@ -24,7 +24,7 @@ async function find() {
       .first();
   
     if (tool) {
-      return Promise.resolve(dbToJs(tool));
+      return Promise.resolve((tool));
     } else {
       return Promise.resolve(null);
     }
