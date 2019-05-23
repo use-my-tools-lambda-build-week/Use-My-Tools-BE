@@ -17,7 +17,7 @@ exports.up = function(knex, Promise) {
       .createTable("tools", table => {
         table.increments();
         table
-          .integer("user_id")
+          .integer("userId")
           .unsigned()
           .references("users.id")
           .notNullable()
@@ -26,8 +26,8 @@ exports.up = function(knex, Promise) {
         table.string("tool", 100).notNullable();
         table.float("price").notNullable();
         table.string("description", 1000);
-        table.string("image_url");
-        table.boolean("is_rented").defaultTo(false);
+        table.string("imageUrl");
+        table.boolean("isRented").defaultTo(false);
       })
     .createTable("rented-tools", table => {
           table.increments();
