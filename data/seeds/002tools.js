@@ -2,11 +2,11 @@
     
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex("toolNames")
+  return knex("tools")
     .del()
     .then(function() {
       // Inserts seed entries
-      return knex("toolNames").insert([
+      return knex("tools").insert([
         {
           toolName: "Hammer",
        imageUrl:
