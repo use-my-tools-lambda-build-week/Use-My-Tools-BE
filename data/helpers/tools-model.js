@@ -22,7 +22,8 @@ async function findById(id) {
       tool: "tool",
       price: "price",
       description: "description",
-      image_url: "image_url"
+      image_url: "image_url",
+      is_rented:"is_rented"
     })
     .where({ id })
     .first();
