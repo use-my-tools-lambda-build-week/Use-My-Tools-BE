@@ -5,7 +5,7 @@ https://rent-mytools.herokuapp.com/api/auth/register
 Upon receiving a token it's recommended to save it in local storage.
 
 Example
-All fields required
+All fields required except thumbnail_url
 {
 first_name:"Test",
 last_name:"Test,
@@ -105,11 +105,13 @@ Example
 user_id, tool, and price are required fields
 
 {
-    user_id:"1",
+    user_id:1,
     tool:"hammer",
     price:"10.50",
     description:"Ya hit stuff, it gets nailed",
     image_url:"http://imgurl.com",
+    is_rented:false
+
    
 }
 
