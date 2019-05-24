@@ -32,23 +32,23 @@ https://rent-mytools.herokuapp.com/api/tools
 Example
 user_id, tool, and price are required fields
 {
-    user_id:"1",
+    userId:"1",
     tool:"hammer",
     price:"10.50",
     description:"Ya hit stuff, it gets nailed",
-    image_url:"http://imgurl.com",
-    is_rented:"false"
+    imageUrl:"http://imgurl.com",
+    isRented:"false"
 }
 
 1. Add a tool to rented list
 https://rent-mytools.herokuapp.com/api/toolrental
 
 Example
-All fields required (renter_id === user_id)
+All fields required (renterId === userId)
 
 {
-    renter_id:"1",
-    tool_id:"1"
+    renterId:"1",
+    toolId:"1"
 }
 
 **Get requests
@@ -57,7 +57,7 @@ All fields required (renter_id === user_id)
 http://https://rent-mytools.herokuapp.com/api/tools
 
 1. Get tool by ID
-(:id === tool_id)
+(:id === toolId)
 http://https://rent-mytools.herokuapp.com/api/tools/:id
 
 1. Get all users
@@ -91,11 +91,11 @@ https://rent-mytools.herokuapp.com/api/users/:id
 Example
 All fields required
 {
-first_name:"Test",
-last_name:"Test,
+firstName:"Test",
+lastName:"Test,
 username:"Test",
 password:"Test234",
-thumbnail_url:"http://test.com"
+thumbnailUrl:"http://test.com"
 }
 
 1. Update a tool
@@ -105,12 +105,12 @@ Example
 user_id, tool, and price are required fields
 
 {
-    user_id:1,
+    userId:1,
     tool:"hammer",
     price:"10.50",
     description:"Ya hit stuff, it gets nailed",
-    image_url:"http://imgurl.com",
-    is_rented:false
+    imageUrl:"http://imgurl.com",
+    isRented:false
 
    
 }
