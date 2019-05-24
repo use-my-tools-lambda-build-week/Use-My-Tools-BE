@@ -91,11 +91,11 @@ https://rent-mytools.herokuapp.com/api/users/:id
 Example
 All fields required
 {
-firstName:"Test",
-lastName:"Test,
+first_name:"Test",
+last_name:"Test,
 username:"Test",
 password:"Test234",
-thumbnailUrl:"http://test.com"
+thumbnail_url:"http://test.com"
 }
 
 1. Update a tool
